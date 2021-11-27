@@ -70,7 +70,7 @@ exit();
 	    <meta name="keywords" content="MediaCenter, Template, eCommerce">
 	    <meta name="robots" content="all">
 
-	    <title>Shopping Portal | Signi-in | Signup</title>
+	    <title>XABAADH Shop | Signi-in | Signup</title>
 
 	    <!-- Bootstrap Core CSS -->
 	    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -192,9 +192,9 @@ echo htmlentities($_SESSION['errmsg']="");
 		</div>
 		<div class="radio outer-xs">
 		  	<a href="forgot-password.php" class="forgot-password pull-right">Forgot your Password?</a>
-		</div>
-	  	<button type="submit" class="btn-upper btn btn-primary checkout-page-button" name="login">Login</button>
-	</form>					
+            <button style="display: inline" type="submit" class="btn-upper btn btn-primary checkout-page-button" name="login">Login</button>
+        </div>
+	</form>
 </div>
 <!-- Sign-in -->
 

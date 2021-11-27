@@ -51,16 +51,16 @@ exit();
 					<i class="icon-reorder shaded"></i>
 				</a>
 
-			  	<a class="brand" href="index.html">
-			  		Adeege Online Shopping | Admin
+			  	<a class="brand" href="http://localhost/adeege/shopping/index.php">
+                   XABAADH Online Shopping| Admin
 			  	</a>
 
 				<div class="nav-collapse collapse navbar-inverse-collapse">
 				
 					<ul class="nav pull-right">
 
-						<li><a href="http://localhost/shopping/index.php">
-						Back to Addege Online
+						<li><a href="#">
+						Back to XABAADH Online Shopping
 						
 						</a></li>
 
@@ -114,7 +114,7 @@ exit();
 		<div class="container">
 			 
 
-			<b class="copyright">&copy; Welcome to Adeege Online Shopping </b> Waxalbo waa diyaar.
+			<b class="copyright">&copy; Welcome to XABAADH Online Shopping </b
 		</div>
 	</div>
 	<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>

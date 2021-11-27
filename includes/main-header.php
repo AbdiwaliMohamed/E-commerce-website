@@ -12,21 +12,18 @@
 		}
 	}
 ?>
-	<div class="main-header">
+	<div class="main-header" >
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
 					<!-- ============================================================= LOGO ============================================================= -->
-<div class="logo">
+<div class="logo" style="margin-left: -10px;">
 	<a href="index.php">
-		
-		<!--<h2>KingZakir Electronics</h2>
--->
-        <img src="img/adeegelogo.jpg" style="width: 160px;height: 100px">
+        <img src="assets/images/logo33.jpg" style="height: 120px; width: 299px; margin-top: -20px" >
 	</a>
 </div>		
 </div>
-<div class="col-xs-12 col-sm-12 col-md-6 top-search-holder">
+<div class="col-xs-12 col-sm-12 col-md-6 top-search-holder" style="margin-top: 10px;">
 <div class="search-area">
     <form name="search" method="post" action="search-result.php">
         <div class="control-group">
@@ -40,25 +37,19 @@
 </div><!-- /.search-area -->
 <!-- ============================================================= SEARCH AREA : END ============================================================= -->				</div><!-- /.top-search-holder -->
 
-				<div class="col-xs-12 col-sm-12 col-md-3 animate-dropdown top-cart-row">
+				<div class="col-xs-12 col-sm-12 col-md-3 animate-dropdown top-cart-row" >
 					<!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
 <?php
 if(!empty($_SESSION['cart'])){
 	?>
-	<div class="dropdown dropdown-cart">
-		<a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
-			<div class="items-cart-inner">
-				<div class="total-price-basket">
-					<span class="lbl">cart -</span>
-					<span class="total-price">
-						<span class="sign">Rs.</span>
-						<span class="value"><?php echo $_SESSION['tp']; ?></span>
-					</span>
-				</div>
+	<div class="dropdown dropdown-cart" >
+		<a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown" >
+			<div class="items-cart-inner" >
 				<div class="basket">
-					<i class="glyphicon glyphicon-shopping-cart"></i>
+                    <img src="https://img.icons8.com/color/40/000000/shopping-cart--v2.png"/>
+                    <h3 style="display: inline;color:#0c3a83">Cart</h3>
 				</div>
-				<div class="basket-item-count"><span class="count"><?php echo $_SESSION['qnty'];?></span></div>
+				<div style="float: right" class="basket-item-count"><span class="count" style="color: #0c3a83;"><?php echo $_SESSION['qnty'];?></span></div>
 			
 		    </div>
 		</a>
@@ -121,23 +112,8 @@ if(!empty($_SESSION['cart'])){
 		</ul><!-- /.dropdown-menu-->
 	</div><!-- /.dropdown-cart -->
 <?php } else { ?>
-<div class="dropdown dropdown-cart">
-		<a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
-			<div class="items-cart-inner">
-				<div class="total-price-basket">
-					<span class="lbl">cart -</span>
-					<span class="total-price">
-						<span class="sign">$.</span>
-						<span class="value">00.00</span>
-					</span>
-				</div>
-				<div class="basket">
-					<i class="glyphicon glyphicon-shopping-cart"></i>
-				</div>
-				<div class="basket-item-count"><span class="count">0</span></div>
-			
-		    </div>
-		</a>
+<div class="dropdown dropdown-cart" style="border:1px solid">
+ <img src="https://img.icons8.com/color/48/000000/shopping-cart--v2.png"/> <h3 style="display: inline;color: #0c3a83">Cart</h3>
 		<ul class="dropdown-menu">
 		
 	
@@ -161,7 +137,7 @@ if(!empty($_SESSION['cart'])){
 				
 				<div class="clearfix"></div>
 					
-				<a href="index.php" class="btn btn-upper btn-primary btn-block m-t-20">Adeege online Shooping</a>
+				<a href="index.php" class="btn btn-upper btn-primary btn-block m-t-20">Xabaadh online Shop</a>
 			</div><!-- /.cart-total-->
 					
 				

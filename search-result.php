@@ -131,30 +131,9 @@ while($row=mysqli_fetch_array($sql))
 </div>
 </div><!-- /.side-menu -->
 <!-- ================================== TOP NAVIGATION : END ================================== -->	            <div class="sidebar-module-container">
-	            	<h3 class="section-title">shop by</h3>
+	            	<h3 class="section-title">Search Result</h3>
 	            	<div class="sidebar-filter">
 		            	<!-- ============================================== SIDEBAR CATEGORY ============================================== -->
-<div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
-	<div class="widget-header m-t-20">
-		<h4 class="widget-title">Category</h4>
-	</div>
-	<div class="sidebar-widget-body m-t-10">
-	         <?php $sql=mysqli_query($con,"select id,categoryName  from category");
-while($row=mysqli_fetch_array($sql))
-{
-    ?>
-		<div class="accordion">
-	    	<div class="accordion-group">
-	            <div class="accordion-heading">
-	                <a href="category.php?cid=<?php echo $row['id'];?>"  class="accordion-toggle collapsed">
-	                   <?php echo $row['categoryName'];?>
-	                </a>
-	            </div>  
-	        </div>
-	    </div>
-	    <?php } ?>
-	</div><!-- /.sidebar-widget-body -->
-</div><!-- /.sidebar-widget -->
 
 
 
@@ -224,12 +203,12 @@ while ($row=mysqli_fetch_array($ret))
 				<div class="action">
 					<ul class="list-unstyled">
 						<li class="add-cart-button btn-group">
-							<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
+							<button style="background-color: black;color: white" class="btn btn-primary icon" data-toggle="dropdown" type="button">
 								<i class="fa fa-shopping-cart"></i>													
 							</button>
 							<a href="category.php?page=product&action=add&id=<?php echo $row['id']; ?>">
-							<button class="btn btn-primary" type="button">Add to cart</button></a>
-													
+							<button class="btn btn-primary" type="button" style="background-color: black;color: white">Add to cart</button></a>
+
 						</li>
 	                   
 		                <li class="lnk wishlist">

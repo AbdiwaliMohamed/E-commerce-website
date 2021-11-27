@@ -3,7 +3,7 @@
     <nav class="yamm megamenu-horizontal" role="navigation">
   
         <ul class="nav">
-            <li class="dropdown menu-item" style="background-color: lightblue">
+            <li class="dropdown menu-item" style="background-color: #0c3a83">
               <?php $sql=mysqli_query($con,"select id,categoryName  from category");
 while($row=mysqli_fetch_array($sql))
 {

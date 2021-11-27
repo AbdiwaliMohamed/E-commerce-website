@@ -7,7 +7,7 @@ if(strlen($_SESSION['alogin'])==0)
 header('location:index.php');
 }
 else{
-date_default_timezone_set('Asia/Kolkata');// change according timezone
+date_default_timezone_set('Africa/Addis_Ababa');// change according timezone
 $currentTime = date( 'd-m-Y h:i:s A', time () );
 
 if(isset($_GET['del']))
@@ -59,7 +59,8 @@ if(isset($_GET['del']))
 									<thead>
 										<tr>
 											<th>#</th>
-											<th>Product Name</th>
+                                            <th>Product Id</th>
+                                            <th>Product Name</th>
 											<th>Category </th>
 											<th>Subcategory</th>
 											<th>Company Name</th>
@@ -69,14 +70,15 @@ if(isset($_GET['del']))
 									</thead>
 									<tbody>
 
-<?php $query=mysqli_query($con,"select products.*,category.categoryName,subcategory.subcategory from products join category on category.id=products.category join subcategory on subcategory.id=products.subCategory");
+<?php $query=mysqli_query($con,"select products.*,category.categoryName,subcategory.subcategory from products join category on category.id=products.category join subcategory on subcategory.id=products.subCategory ORDER BY id DESC ");
 $cnt=1;
 while($row=mysqli_fetch_array($query))
 {
 ?>									
 										<tr>
 											<td><?php echo htmlentities($cnt);?></td>
-											<td><?php echo htmlentities($row['productName']);?></td>
+                                            <td><?php echo htmlentities($row['id']);?></td>
+                                            <td><?php echo htmlentities($row['productName']);?></td>
 											<td><?php echo htmlentities($row['categoryName']);?></td>
 											<td> <?php echo htmlentities($row['subcategory']);?></td>
 											<td><?php echo htmlentities($row['productCompany']);?></td>

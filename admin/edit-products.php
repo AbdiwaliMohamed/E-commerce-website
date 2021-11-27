@@ -3,24 +3,26 @@
 session_start();
 include('include/config.php');
 if(strlen($_SESSION['alogin'])==0)
-	{	
-header('location:index.php');
+{
+    header('location:index.php');
 }
 else{
+    date_default_timezone_set('Africa/Addis_Ababa');// change according timezone
+    $currentTime = date( 'd-m-Y h:i:s A', time () );
 	$pid=intval($_GET['id']);// product id
 if(isset($_POST['submit']))
 {
-	$category=$_POST['category'];
-	$subcat=$_POST['subcategory'];
+    $Category=$_POST['category'];
+	$subcat=$_POST['subCategory'];
 	$productname=$_POST['productName'];
 	$productcompany=$_POST['productCompany'];
-	$productprice=$_POST['productprice'];
-	$productpricebd=$_POST['productpricebd'];
+	$productprice=$_POST['productPrice'];
+	$productpricebd=$_POST['productPriceBeforeDiscount'];
 	$productdescription=$_POST['productDescription'];
-	$productscharge=$_POST['productShippingcharge'];
+	$productscharge=$_POST['shippingCharge'];
 	$productavailability=$_POST['productAvailability'];
 	
-$sql=mysqli_query($con,"update  products set category='$category',subCategory='$subcat',productName='$productname',productCompany='$productcompany',productPrice='$productprice',productDescription='$productdescription',shippingCharge='$productscharge',productAvailability='$productavailability',productPriceBeforeDiscount='$productpricebd' where id='$pid' ");
+$sql=mysqli_query($con,"update  products set category='$Category',subCategory='$subcat',productName='$productname',productCompany='$productcompany',productPrice='$productprice',productDescription='$productdescription',shippingCharge='$productscharge',productAvailability='$productavailability',productPriceBeforeDiscount='$productpricebd' where id='$pid' ");
 $_SESSION['msg']="Product Updated Successfully !!";
 
 }
@@ -72,7 +74,7 @@ $("#suggesstion-box").hide();
 
 						<div class="module" style="background-color: lightblue">
 							<div class="module-head" style="background-color: lightblue">
-								<h3>Insert Product</h3>
+								<h1 style="color: green; text-align: center">Update Product</h1>
 							</div>
 							<div class="module-body" style="background-color: lightblue">
 
@@ -103,7 +105,7 @@ $query=mysqli_query($con,"select products.*,category.categoryName as catname,cat
 $cnt=1;
 while($row=mysqli_fetch_array($query))
 {
-  
+
 
 
 ?>
@@ -224,7 +226,7 @@ while($rw=mysqli_fetch_array($query))
 <?php } ?>
 	<div class="control-group">
 											<div class="controls">
-												<button type="submit" name="submit" class="btn">Update</button>
+												<a href="manage-products.php" type="submit" name="submit" class="btn">Update</a>
 											</div>
 										</div>
 									</form>

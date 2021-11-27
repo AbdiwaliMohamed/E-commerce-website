@@ -3,12 +3,13 @@
 session_start();
 include('include/config.php');
 if(strlen($_SESSION['alogin'])==0)
-	{	
-header('location:index.php');
+{
+    header('location:index.php');
 }
 else{
-date_default_timezone_set('Asia/Kolkata');// change according timezone
-$currentTime = date( 'd-m-Y h:i:s A', time () );
+    date_default_timezone_set('Africa/Addis_Ababa');// change according timezone
+    $currentTime = date( 'd-m-Y h:i:s A', time () );
+
 
 if(isset($_GET['del']))
 		  {
@@ -54,8 +55,8 @@ if(isset($_GET['del']))
 
 									<br />
 
-							
-								<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
+
+                                <table cellpadding="0" cellspacing="0" border="0" class=" table table-bordered table-striped	 display table-responsive">
 									<thead>
 										<tr>
 											<th>#</th>
@@ -65,7 +66,7 @@ if(isset($_GET['del']))
 											<th>Shippping Address/City/State/Pincode </th>
 											<th>Billing Address/City/State/Pincode </th>
 											<th>Reg. Date </th>
-										
+
 										</tr>
 									</thead>
 									<tbody>
@@ -80,7 +81,7 @@ while($row=mysqli_fetch_array($query))
 											<td><?php echo htmlentities($row['name']);?></td>
 											<td><?php echo htmlentities($row['email']);?></td>
 											<td> <?php echo htmlentities($row['contactno']);?></td>
-											<td><?php echo htmlentities($row['shippingAddress'].",".$row['shippingCity'].",".$row['shippingState']."-".$row['shippingPincode']);?></td>
+											<td style="width: 10%"><?php echo htmlentities($row['shippingAddress'].",".$row['shippingCity'].",".$row['shippingState']."-".$row['shippingPincode']);?></td>
 											<td><?php echo htmlentities($row['billingAddress'].",".$row['billingCity'].",".$row['billingState']."-".$row['billingPincode']);?></td>
 											<td><?php echo htmlentities($row['regDate']);?></td>
 											

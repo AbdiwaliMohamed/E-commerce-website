@@ -84,13 +84,13 @@ $(document).ready(function () {
 
     $(owlElementID).owlCarousel({
 
-        autoPlay: 5000,
+        autoPlay: 3000,
         stopOnHover: true,
         navigation: true,
         pagination: true,
         singleItem: true,
         addClassActive: true,
-        transitionStyle: "fade",
+        transitionStyle: "backSlide",
         navigationText: ["<i class='icon fa fa-angle-left'></i>", "<i class='icon fa fa-angle-right'></i>"],
 
         afterInit: function() {

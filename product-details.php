@@ -123,7 +123,7 @@ while ($rw=mysqli_fetch_array($ret)) {
 					<!-- ==============================================CATEGORY============================================== -->
 <div class="sidebar-widget outer-bottom-xs wow fadeInUp">
 	<h3 class="section-title">Category</h3>
-	<div class="sidebar-widget-body m-t-10">
+	<div class="sidebar-widget-body m-t-10"  style="color: #0c3a83">
 		<div class="accordion">
 
 		            <?php $sql=mysqli_query($con,"select id,categoryName  from category");
@@ -144,59 +144,60 @@ while($row=mysqli_fetch_array($sql))
 </div>
 	<!-- ============================================== CATEGORY : END ============================================== -->					<!-- ============================================== HOT DEALS ============================================== -->
 <div class="sidebar-widget hot-deals wow fadeInUp">
-	<h3 class="section-title">hot deals</h3>
+	<h3 class="section-title">Product Details</h3>
 	<div class="owl-carousel sidebar-carousel custom-carousel owl-theme outer-top-xs">
-		
+
 								   <?php
 $ret=mysqli_query($con,"select * from products order by rand() limit 4 ");
 while ($rws=mysqli_fetch_array($ret)) {
 
 ?>
 
-								        
-													<div class="item">
+
+					<div class="item">
 					<div class="products">
 						<div class="hot-deal-wrapper">
-							<div class="image">
+							<!--<div class="image">
 								<img src="admin/productimages/<?php echo htmlentities($rws['productName']);?>/<?php echo htmlentities($rws['productImage1']);?>"  width="200" height="334" alt="">
 							</div>
-							
-						</div><!-- /.hot-deal-wrapper -->
+
+						</div><!-- /.hot-deal-wrapper
 
 						<div class="product-info text-left m-t-20">
 							<h3 class="name"><a href="product-details.php?pid=<?php echo htmlentities($rws['id']);?>"><?php echo htmlentities($rws['productName']);?></a></h3>
 							<div class="rating rateit-small"></div>
 
-							<div class="product-price">	
+							<div class="product-price">
 								<span class="price">
-									Rs. <?php echo htmlentities($rws['productPrice']);?>.00
+									$. <?php echo htmlentities($rws['productPrice']);?>.00
 								</span>
-									
-							    <span class="price-before-discount">Rs.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>					
-							
-							</div><!-- /.product-price -->
-							
-						</div><!-- /.product-info -->
+
+							    <span class="price-before-discount">$.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>
+
+							</div>
+
+						</div>
 
 						<div class="cart clearfix animate-effect">
 							<div class="action">
-								
+
 								<div class="add-cart-button btn-group">
 									<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
-								<i class="fa fa-shopping-cart"></i>													
+								<i class="fa fa-shopping-cart"></i>
 							</button>
 						<a href="product-details.php?page=product&action=add&id=<?php echo $rws['id']; ?>" class="lnk btn btn-primary">Add to cart</a>
-													
-															
+
+
 								</div>
-								
+
 							</div><!-- /.action -->
-						</div><!-- /.cart -->
-					</div>	
-					</div>		
-					<?php } ?>        
-						
-	    
+						</div>
+
+                    </div>
+					</div>
+					<?php } ?>
+
+
     </div><!-- /.sidebar-widget -->
 </div>
 
@@ -346,7 +347,7 @@ $num=mysqli_num_rows($rt);
 									</div>
 									<div class="col-sm-9">
 										<div class="stock-box">
-											<span class="value"><?php if($row['shippingCharge']==0)
+											<span class="value">$.<?php if($row['shippingCharge']==0)
 											{
 												echo "Free";
 											}
@@ -404,7 +405,7 @@ $num=mysqli_num_rows($rt);
 										<div class="cart-quantity">
 											<div class="quant-input">
 								                <div class="arrows">
-								                  <div class="arrow plus gradient"><span class="ir"><i class="icon fa fa-sort-asc"></i></span></div>
+                                                    <button style="border: white; background-color: white " name="submit" class="arrow plus gradient"><span   class=" ir icon fa fa-sort-asc"></span></button>
 								                  <div class="arrow minus gradient"><span class="ir"><i class="icon fa fa-sort-desc"></i></span></div>
 								                </div>
 								                <input type="text" value="1">
@@ -413,7 +414,12 @@ $num=mysqli_num_rows($rt);
 									</div>
 
 									<div class="col-sm-7">
-										<a href="product-details.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</a>
+                                        <div class="action">
+                                            <button class="btn btn-primary icon" data-toggle="dropdown" type="button"  style="background-color: #000000;border-radius: 5%;">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </button>
+                                            <a href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>" class="lnk btn btn-primary" style="background-color: #000000;border-radius: 5%;"> Add To Cart</a></div>
+
 									</div>
 
 									
@@ -422,13 +428,13 @@ $num=mysqli_num_rows($rt);
 
 							<div class="product-social-link m-t-20 text-right">
 								<span class="social-label">Share :</span>
-								<div class="social-icons">
+								<div class="social-icons" >
 						            <ul class="list-inline">
-						                <li><a class="fa fa-facebook" href="http://facebook.com/transvelo"></a></li>
-						                <li><a class="fa fa-twitter" href="#"></a></li>
-						                <li><a class="fa fa-linkedin" href="#"></a></li>
-						                <li><a class="fa fa-rss" href="#"></a></li>
-						                <li><a class="fa fa-pinterest" href="#"></a></li>
+                                        <li><a style="background-color: white" href="https://www.facebook.com/cabdiwali.maxed.7"><img src="https://img.icons8.com/fluency/40/4a90e2/facebook-new.png"/></a></li>
+                                        <li><a style="background-color: white" href=" https://wa.me/249127638689"><img src="https://img.icons8.com/fluency/40/000000/whatsapp.png"/></a></li>
+						                <li><a style="background-color: white" href="#"><img src="https://img.icons8.com/fluency/40/000000/youtube-play.png"/></a></li>
+						                <li><a style="background-color: white" href="#"> <img src="https://img.icons8.com/cute-clipart/40/000000/instagram-new.png"/></a></li>
+						                <li><a style="background-color: white" href="#"><img src="https://img.icons8.com/fluency/40/000000/twitter.png"/></a></li>
 						            </ul><!-- /.social-icons -->
 						        </div>
 							</div>

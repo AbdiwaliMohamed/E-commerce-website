@@ -8,7 +8,7 @@ header('location:index.php');
 }
 else{
 
-date_default_timezone_set('Asia/Kolkata');// change according timezone
+date_default_timezone_set('Africa/Addis_Ababa');// change according timezone
 $currentTime = date( 'd-m-Y h:i:s A', time () );
 
 
@@ -47,11 +47,11 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 			<div class="span9">
 					<div class="content">
 
-	<div class="module" style="background-color: lightblue">
-							<div class="module-head" style="background-color: lightblue">
-								<h3>Pending Orders</h3>
+	<div class="" style="">
+							<div class="module-head" style="background-color:#1dbe23">
+								<h1>Pending Orders / Dalabaadka aan wali loo gayn Macamiisha</h1>
 							</div>
-							<div class="module-body table" style="background-color: lightblue">
+
 	<?php if(isset($_GET['del']))
 {?>
 									<div class="alert alert-error">
@@ -62,8 +62,8 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 
 									<br />
 
-							
-								<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display table-responsive" >
+
+                                <table cellpadding="0" cellspacing="0" border="0" class=" table table-bordered table-striped	 display table-responsive" style="background-color: white; font-weight: bold">
 									<thead>
 										<tr>
 											<th>#</th>
@@ -71,9 +71,11 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 											<th width="50">Email /Contact no</th>
 											<th>Shipping Address</th>
 											<th>Product </th>
-											<th>Qty </th>
+                                            <th>Product ID </th>
+                                            <th>Qty </th>
 											<th>Amount </th>
-											<th>Order Date</th>
+                                            <th>Payment Method </th>
+                                            <th>Order Date</th>
 											<th>Action</th>
 											
 										
@@ -83,7 +85,7 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 <tbody>
 <?php 
 $status='Delivered';
-$query=mysqli_query($con,"select users.name as username,users.email as useremail,users.contactno as usercontact,users.shippingAddress as shippingaddress,users.shippingCity as shippingcity,users.shippingState as shippingstate,users.shippingPincode as shippingpincode,products.productName as productname,products.shippingCharge as shippingcharge,orders.quantity as quantity,orders.orderDate as orderdate,products.productPrice as productprice,orders.id as id  from orders join users on  orders.userId=users.id join products on products.id=orders.productId where orders.	orderStatus!='$status' or orders.orderStatus is null");
+$query=mysqli_query($con,"select users.name as username,users.email as useremail,users.contactno as usercontact,users.shippingAddress as shippingaddress,users.shippingCity as shippingcity,users.shippingState as shippingstate,users.shippingPincode as shippingpincode,products.productName as productname,products.shippingCharge as shippingcharge,orders.quantity as quantity,orders.paymentMethod as pay,orders.orderDate as orderdate,products.productPrice as productprice,orders.id as id, orders.productId as productId  from orders join users on  orders.userId=users.id join products on products.id=orders.productId where orders.	orderStatus!='$status' or orders.orderStatus is null ORDER BY id DESC ");
 $cnt=1;
 while($row=mysqli_fetch_array($query))
 {
@@ -94,9 +96,11 @@ while($row=mysqli_fetch_array($query))
 <td><?php echo htmlentities($row['useremail']);?>/<?php echo htmlentities($row['usercontact']);?></td>
 <td><?php echo htmlentities($row['shippingaddress'].",".$row['shippingcity'].",".$row['shippingstate']."-".$row['shippingpincode']);?></td>
 											<td><?php echo htmlentities($row['productname']);?></td>
-											<td><?php echo htmlentities($row['quantity']);?></td>
+                                            <td><?php echo htmlentities($row['productId']);?></td>
+                                            <td><?php echo htmlentities($row['quantity']);?></td>
 											<td><?php echo htmlentities($row['quantity']*$row['productprice']+$row['shippingcharge']);?></td>
-											<td><?php echo htmlentities($row['orderdate']);?></td>
+                                            <td><?php echo htmlentities($row['pay']);?></td>
+                                            <td><?php echo htmlentities($row['orderdate']);?></td>
 											<td>   <a href="updateorder.php?oid=<?php echo htmlentities($row['id']);?>" title="Update order" target="_blank"><i class="icon-edit"></i></a>
 											</td>
 											</tr>

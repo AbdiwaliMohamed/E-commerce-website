@@ -2,6 +2,6 @@
 		<div class="container">
 			 
 
-			<b class="copyright">&copy; 2020 Adeege Online Shopping </b> Welcome.
-		</div>
+            <a href="https://www.abdiwali.net"><b class="copyright">&copy; 2021 Developed by Abdiwali</b>
+            </a> 		</div>
 	</div>

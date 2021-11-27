@@ -362,10 +362,12 @@ $(document).ready(function(){
 				itemsDesktopSmall : [1000,max_items],
 				itemsTablet: [920,tablet_items],
 				itemsMobile: [560,mobile_items],
-			});
-		
-			
-			var owl = $(this).data('owlCarousel');
+			},[300]);
+          //  $(this).trigger('prev.owl.carousel', [300]);
+
+
+
+            var owl = $(this).data('owlCarousel');
 			
 			/* Arrow next */
 			$(this).parent().parent().find('.icon-left-dir').click(function(e){

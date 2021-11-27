@@ -1,12 +1,13 @@
 <?php
 session_start();
-
-include_once 'include/config.php';
+include('include/config.php');
 if(strlen($_SESSION['alogin'])==0)
-  { 
-header('location:index.php');
+{
+    header('location:index.php');
 }
 else{
+    date_default_timezone_set('Africa/Addis_Ababa');// change according timezone
+    $currentTime = date( 'd-m-Y h:i:s A', time () );
 $oid=intval($_GET['oid']);
 if(isset($_POST['submit2'])){
 $status=$_POST['status'];

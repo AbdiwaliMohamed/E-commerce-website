@@ -36,7 +36,7 @@ window.print();
       <td  class="fontkink"><?php echo $oid;?></td>
     </tr>
     <?php 
-$ret = mysqli_query($con,"SELECT * FROM ordertrackhistory WHERE orderId='$oid'");
+$ret = mysqli_query($con,"SELECT * FROM ordertrackhistory WHERE orderId='$oid' ORDER BY id DESC ");
 $num=mysqli_num_rows($ret);
 if($num>0)
 {

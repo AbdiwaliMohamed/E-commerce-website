@@ -1,4 +1,4 @@
-<footer id="footer" class="footer color-bg" >
+<footer id="footer" class="footer color-bg"  style="background-color: #0c3a83; color: white">
 	  <div class="links-social inner-top-sm">
         <div class="container">
             <div class="row">
@@ -10,22 +10,23 @@
             <a href="index.php">
                 
 <!--<h3>Shopping Portal</h3>-->
-                <img src="img/adeegelogo.jpg" style="width: 200px;height: 120px">
+                <img src="assets/images/logo33.jpg" style="width: 299px;height: 120px">
             </a>
         </div><!-- /.logo -->
     
     </div><!-- /.footer-logo -->
 
      <div class="module-body m-t-20">
-       <!-- <p class="about-us"> Nam libero tempore, cum soluta nobis est ses  eligendi optio cumque cum soluta nobis est ses  eligendi optio cumque.</p>-->
-         <p class="about-us">Asc, Dhamaan walaalaha soo booqanayo websitekaan waxaan ugu talagalnay in aad sifudud uga adeegatid adigoo joogo gurigaaga, magaalkasta iyo wadan kastabo, fadlan nagala soo xariir ciwanada hoos ku xusan wixi aqbaar dheraad ah, mahadsanidiin</p>
-        <div class="social-icons">
-            
-        <a href="http://facebook.com/transvelo" class='active'><i class="icon fa fa-facebook"></i></a>
-        <a href="#"><i class="icon fa fa-twitter"></i></a>
-        <a href="#"><i class="icon fa fa-linkedin"></i></a>
-        <a href="#"><i class="icon fa fa-rss"></i></a>
-        <a href="#"><i class="icon fa fa-pinterest"></i></a>
+
+         <p style="font-size: 14px;color: white" class="about-us">Ka adeego xabaadh Online shop adigoo jooga gurigaaga ama goobtaada shaqo, fadlan nagala soo xariir ciwanada hoos ku xusan wixi fahfaahin dheraad ah, mahadsanidiin</p>
+        <div class="" >
+            <ul class="list-inline">
+                <li><a href="https://www.facebook.com/cabdiwali.maxed.7"><img src="https://img.icons8.com/fluency/48/4a90e2/facebook-new.png"/></a></li>
+                <li><a  href=" https://wa.me/249127638689"><img src="https://img.icons8.com/color/48/000000/whatsapp--v4.png"/></a></li>
+                <li><a  href="#"><img src="https://img.icons8.com/fluency/48/000000/youtube-play.png"/></a></li>
+                <li><a href="#"><img src="https://img.icons8.com/color/48/000000/instagram-new.png"/></a></li>
+                <li><a  href="#"><img src="https://img.icons8.com/fluency/48/000000/twitter.png"/></a></li>
+            </ul><!-- /.social-icons -->
 
         </div><!-- /.social-icons -->
     </div><!-- /.module-body -->
@@ -36,29 +37,16 @@
             	<div class="col-xs-12 col-sm-6 col-md-4">
             		 <!-- ============================================================= CONTACT TIMING============================================================= -->
 <div class="contact-timing">
-	<div class="module-heading">
-        <h4 class="module-title"><h2>opening time</h2></h4>
-	</div><!-- /.module-heading -->
 
-	<div class="module-body outer-top-xs">
-		<div class="table-responsive">
-			<table class="table">
-				<tbody>
-					<tr><td>Monday-Friday:</td><td class="pull-right">08.00 To 18.00</td></tr>
-					<tr><td>Saturday:</td><td class="pull-right">09.00 To 20.00</td></tr>
-					<tr><td>Sunday:</td><td class="pull-right">10.00 To 20.00</td></tr>
-				</tbody>
-			</table>
-		</div><!-- /.table-responsive -->
-	</div><!-- /.module-body -->
+
 </div><!-- /.contact-timing -->
 <!-- ============================================================= CONTACT TIMING : END ============================================================= -->            	</div><!-- /.col -->
 
             	<div class="col-xs-12 col-sm-6 col-md-4">
             		 <!-- ============================================================= INFORMATION============================================================= -->
-<div class="contact-information">
+<div class="contact-information" style="color: white">
 	<div class="module-heading">
-        <h4 class="module-title"><h2>information</h2></h4>
+        <h4 class="module-title"><h2 style="color: yellow">information</h2></h4>
 	</div><!-- /.module-heading -->
 
 	<div class="module-body outer-top-xs">
@@ -71,8 +59,9 @@
                     </span>
                 </div>
                 <div class="media-body">
-                    <p>Kismanyo, Somalia</p>
+                    <p>Nairobi, Kenya <br> Kismayo, Somalia</p>
                 </div>
+
             </li>
 
               <li class="media">
@@ -83,7 +72,7 @@
                     </span>
                 </div>
                 <div class="media-body">
-                    <p>(252) 613737300<br>(252) 618276245</p>
+                    <p>(254) 792902284 <br> (252) 618414299</p>
                 </div>
             </li>
 
@@ -95,16 +84,25 @@
                     </span>
                 </div>
                 <div class="media-body">
-                    <span><a href="#">qorahyare@gmail.com</a></span>
+                    <span><a style="color: white" href="#">abdiwali@gmail.com</a></span>
+                    <br> <span><a style="color: white" href="#">abdiwali@gmail.com</a></span>
+
                 </div>
             </li>
               
             </ul>
+
     </div><!-- /.module-body -->
 </div><!-- /.contact-timing -->
-<!-- ============================================================= INFORMATION : END ============================================================= -->            	</div><!-- /.col -->
+
+                        <!-- ============================================================= INFORMATION : END ============================================================= -->            	</div><!-- /.col -->
             </div><!-- /.row -->
+            <br>
+            <a href="https://www.abdiwali.net"><b class="copyright" style="font-weight: bolder; float: right" >Developed &copy; : Abdiwali </b></a>
+
         </div><!-- /.container -->
-    </div><!-- /.links-social -->
+
+      </div><!-- /.links-social -->
+
 
     

@@ -107,15 +107,15 @@ header('location:my-wishlist.php');
 <div class="body-content outer-top-xs">
 	<div class='container'>
 		<div class='row outer-bottom-sm'>
-			<div class='col-md-3 sidebar' style="background-color: lightblue">
+			<div class='col-md-3 sidebar' style="background-color: #0c3a83">
 	            <!-- ================================== TOP NAVIGATION ================================== -->
 <div class="side-menu animate-dropdown outer-bottom-xs">
 <div class="side-menu animate-dropdown outer-bottom-xs">
     <div class="head" style="background-color: lightblue"><i class="icon fa fa-align-justify fa-fw"></i>Sub Categories</div>
     <nav class="yamm megamenu-horizontal" role="navigation" >
   
-        <ul class="nav" style="background-color: lightblue">
-            <li class="dropdown menu-item" style="background-color: lightblue">
+        <ul class="nav" style="background-color: lightblue; color: white">
+            <li class="dropdown menu-item" style="background-color: #0c3a83; ">
               <?php $sql=mysqli_query($con,"select id,subcategory  from subcategory where categoryid='$cid'");
 
 while($row=mysqli_fetch_array($sql))
@@ -131,23 +131,23 @@ while($row=mysqli_fetch_array($sql))
 </div>
 </div><!-- /.side-menu -->
 <!-- ================================== TOP NAVIGATION : END ================================== -->
-                <div class="sidebar-module-container" style="background-color: lightblue">
+                <div class="sidebar-module-container" style="background-color:#0c3a83">
 	            	<h3 class="section-title">shop by</h3>
-	            	<div class="sidebar-filter" style="background-color: lightblue">
+	            	<div class="sidebar-filter" style="background-color: #0c3a83">
 		            	<!-- ============================================== SIDEBAR CATEGORY ============================================== -->
-<div class="sidebar-widget wow fadeInUp outer-bottom-xs " style="background-color: lightblue">
+<div class="sidebar-widget wow fadeInUp outer-bottom-xs " style="background-color: #0c3a83">
 	<div class="widget-header m-t-20" style="background-color: lightblue">
-		<h4 class="widget-title" ><h2>Categorys</h2></h4>
+		<h4 class="widget-title" ><h2>Categories</h2></h4>
 	</div>
-	<div class="sidebar-widget-body m-t-10" style="background-color: lightblue">
-	         <?php $sql=mysqli_query($con,"select id,categoryName  from category");
+	<div class="sidebar-widget-body m-t-10" style="background-color: #0c3a83">
+	         <?php $sql=mysqli_query($con,"select id,categoryName  from category ORDER BY id DESC");
 while($row=mysqli_fetch_array($sql))
 {
     ?>
-		<div class="accordion" style="background-color: lightblue">
-	    	<div class="accordion-group" style="background-color: lightblue">
-	            <div class="accordion-heading" style="background-color: lightblue">
-	                <a href="category.php?cid=<?php echo $row['id'];?>"  class="accordion-toggle collapsed" style="background-color: lightblue">
+		<div class="accordion" style="background-color: #0c3a83">
+	    	<div class="accordion-group" style="background-color: #0c3a83">
+	            <div class="accordion-heading" style="background-color: #0c3a83">
+	                <a href="category.php?cid=<?php echo $row['id'];?>"  class="accordion-toggle collapsed" style="background-color: #0c3a83; color: white; font-weight: bold">
 	                   <?php echo $row['categoryName'];?>
 	                </a>
 	            </div>  
@@ -174,7 +174,7 @@ while($row=mysqli_fetch_array($sql))
 				<img src="assets/images/banners/cat-banner-8.jpg" alt="" class="img-responsive">
 
 			</div>
-			<div class="container-fluid" style="background-color: lightblue">
+			<div class="container-fluid" style="background-color: #0c3a83">
 				<div class="caption vertical-top text-left">
 					<div class="big-text">
 						<br />
@@ -201,7 +201,7 @@ while($row=mysqli_fetch_array($sql))
 							<div class="category-product  inner-top-vs">
 								<div class="row">									
 			<?php
-$ret=mysqli_query($con,"select * from products where category='$cid'");
+$ret=mysqli_query($con,"select * from products where category='$cid' ORDER BY id DESC");
 $num=mysqli_num_rows($ret);
 if($num>0)
 {
@@ -234,13 +234,13 @@ while ($row=mysqli_fetch_array($ret))
 				<div class="action">
 					<ul class="list-unstyled">
 						<li class="add-cart-button btn-group">
-							<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
+							<button class="btn btn-primary icon" data-toggle="dropdown" type="button"  style="background-color: #000000;border-radius: 5%;">
 								<i class="fa fa-shopping-cart"></i>													
 							</button>
 							<a href="category.php?page=product&action=add&id=<?php echo $row['id']; ?>">
-							<button class="btn btn-primary" type="button">Add to cart</button></a>
-													
-						</li>
+							<button class="btn btn-primary" type="button" style="background-color: #000000;border-radius: 5%;"> Add to cart</button></a>
+
+                        </li>
 	                   
 		                <li class="lnk wishlist">
 							<a class="add-to-cart" href="category.php?pid=<?php echo htmlentities($row['id'])?>&&action=wishlist" title="Wishlist">

@@ -114,10 +114,10 @@ header('location:my-wishlist.php');
 	            	<div class="sidebar-filter">
 		            	<!-- ============================================== SIDEBAR CATEGORY ============================================== -->
 <div class="sidebar-widget wow fadeInUp outer-bottom-xs ">
-	<div class="widget-header m-t-20" style="background-color: lightblue">
-		<h4 class="widget-title">Category</h4>
-	</div>
-	<div class="sidebar-widget-body m-t-10" style="background-color: lightblue">
+
+    <div class="widget-header m-t-20" style="">
+        <h4 class="widget-title">Category</h4>
+    </div>    <div class="sidebar-widget-body m-t-10" style="background-color: #0c3a83; color: white">
 	         <?php $sql=mysqli_query($con,"select id,categoryName  from category");
 while($row=mysqli_fetch_array($sql))
 {
@@ -125,7 +125,7 @@ while($row=mysqli_fetch_array($sql))
 		<div class="accordion">
 	    	<div class="accordion-group">
 	            <div class="accordion-heading">
-	                <a href="category.php?cid=<?php echo $row['id'];?>"  class="accordion-toggle collapsed">
+	                <a  style="color: white" href="category.php?cid=<?php echo $row['id'];?>"  class="accordion-toggle collapsed">
 	                   <?php echo $row['categoryName'];?>
 	                </a>
 	            </div>  

@@ -3,15 +3,15 @@
 
 ?>
 
-<div class="top-bar animate-dropdown" style="background-color: lightblue">
+<div class="top-bar animate-dropdown" style="background-color: #0c3a83;color: #1dbe23 ">
 	<div class="container">
 		<div class="header-top-inner">
 			<div class="cnt-account">
-				<ul class="list-unstyled">
+				<ul class="list-unstyled" style="font-size: 15px;">
 
 <?php if(strlen($_SESSION['login']))
     {   ?>
-				<li><a href="#"><i class="icon fa fa-user"></i>Welcome -<?php echo htmlentities($_SESSION['username']);?></a></li>
+				<li  >  <a href="#"><i class="icon fa fa-user"></i>Welcome - <?php echo htmlentities($_SESSION['username']);?></a></li>
 				<?php } ?>
 
 					<li><a href="my-account.php"><i class="icon fa fa-user"></i>My Account</a></li>
@@ -25,12 +25,14 @@
 else{ ?>
 	
 				<li><a href="logout.php"><i class="icon fa fa-sign-out"></i>Logout</a></li>
-				<?php } ?>	
-				</ul>
+				<?php } ?>
+                    <li style="font-weight: bold; font-size: 14px; color: #25fa2d; font-family: monospace;"><marquee>Contact Us: +254792902284/+252618414299</marquee></li>
+
+                </ul>
 			</div><!-- /.cnt-account -->
 
 <div class="cnt-block">
-				<ul class="list-unstyled list-inline">
+				<ul class="list-unstyled list-inline" style="font-size: 15px;">
 					<li class="dropdown dropdown-small">
 						<a href="track-orders.php" class="dropdown-toggle" > <span class="key">Track Order</span></a>
 						
